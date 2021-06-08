@@ -1,0 +1,4 @@
+C:\Users\wendo\Desktop\CodingDojo\CSharp\MultiplicationTable\obj\Debug\netcoreapp3.1\MultiplicationTable.csprojAssemblyReference.cache
+C:\Users\wendo\Desktop\CodingDojo\CSharp\MultiplicationTable\obj\Debug\netcoreapp3.1\MultiplicationTable.AssemblyInfoInputs.cache
+C:\Users\wendo\Desktop\CodingDojo\CSharp\MultiplicationTable\obj\Debug\netcoreapp3.1\MultiplicationTable.AssemblyInfo.cs
+C:\Users\wendo\Desktop\CodingDojo\CSharp\MultiplicationTable\obj\Debug\netcoreapp3.1\MultiplicationTable.csproj.CoreCompileInputs.cache
