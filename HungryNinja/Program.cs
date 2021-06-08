@@ -9,9 +9,11 @@ namespace HungryNinja
         {   
             Buffet YummyBuffet = new Buffet();
             Ninja micah = new Ninja();
-            micah.Eat(YummyBuffet.Serve());
-            micah.Eat(YummyBuffet.Serve());
-            micah.Eat(YummyBuffet.Serve());
+            
+            while(!micah.IsFull)
+            {
+                micah.Eat(YummyBuffet.Serve());
+            }
         }
     }
 }

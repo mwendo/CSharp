@@ -17,7 +17,7 @@ namespace HungryNinja
                 new Food("Pretzel", 500, false, false),
                 new Food("Apple Pie", 750, false, true),
                 new Food("Vanilla Cake", 825, false, true),
-                new Food("Burrito", 900, true, false),
+                new Food("Burrito", 1000, true, false),
             };
         }
 
