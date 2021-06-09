@@ -38,7 +38,7 @@ namespace WizardNinjaSamurai
 
         public virtual int Attack(Human target)
         {
-            target.health -= 5 * this.Strength;
+            target.health -= 3 * this.Strength;
             return target.Health;
         }
     }

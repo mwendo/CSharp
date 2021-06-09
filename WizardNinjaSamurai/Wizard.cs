@@ -18,12 +18,11 @@ namespace WizardNinjaSamurai
             return target.Health;
         }
 
-        public int Heal(Human target)
+        public void Heal(Human target)
         {
             int heal = 10 * Intelligience;
             target.Health += heal;
             Console.WriteLine($"{Name} healed {target.Name} for {heal} points!");
-            return target.Health;
         }
     }
 }

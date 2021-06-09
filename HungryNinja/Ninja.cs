@@ -3,34 +3,19 @@ using System.Collections.Generic;
 
 namespace HungryNinja
 {
-    class Ninja
+    public abstract class Ninja
     {
-        private int calorieIntake;
-        public List<Food> FoodHistory;
+        protected int calorieIntake;
+        public List<IConsumable> ConsumptionHistory;
 
         public Ninja()
         {
             calorieIntake = 0;
-            FoodHistory = new List<Food>();
+            ConsumptionHistory = new List<IConsumable>();
         }
 
-        public bool IsFull
-        {
-            get{ return calorieIntake > 1200; }
-        }
+        public abstract bool IsFull {get;}
 
-        public void Eat(Food item)
-        {
-            if(IsFull == false)
-            {
-                calorieIntake += item.Calories;
-                FoodHistory.Add(item);
-                Console.WriteLine($"You are being served a {item.Name}. It is spicy {item.IsSpicy}. It is sweet {item.IsSweet}.");
-            }
-            else
-            {
-                Console.WriteLine("WARNING. Your ninja is full and can't eat anymore");
-            }
-        }
+        public abstract void Consume(IConsumable item);
     }
 }
