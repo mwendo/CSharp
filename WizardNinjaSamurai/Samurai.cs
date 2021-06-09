@@ -1,30 +1,31 @@
+using System;
+
 namespace WizardNinjaSamurai
 {
-    class Samurai : Human
+    public class Samurai : Human
     {
-        public Samurai(string n, int s, int i, int d) : base(n, s, i ,d)
+        public Samurai(string name) : base("samurai", 3, 3, 3, 200)
         {
-            health = 200;
+            Name = name;
         }
 
         public override int Attack(Human target)
         {
-            int dmg = base.Attack;
-            if(target.health < 50)
+            if(target.Health < 50)
             {
-                target.health = 0;
+                return target.Health = 0;
+                Console.WriteLine($"{Name} attacked and killed you.");
             }
             else
             {
-                target.health -= dmg;
+                Console.WriteLine($"{Name} attacked you");
+                return this.Attack(target);
             }
-            Console.WriteLine($"{Name} attacked {target.Name} for {dmg} damage!");
-            return target.Health;
         }
 
         public int Meditate()
         {
-            this.health = 200;
+            this.Health = 200;
             return this.Health;
         }
     }

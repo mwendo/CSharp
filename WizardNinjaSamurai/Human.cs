@@ -1,19 +1,20 @@
 using System;
 
-namespace Human
+namespace WizardNinjaSamurai
 {
-    class Human
+    public class Human
     {
         // Fields for Human
         public string Name;
         public int Strength;
         public int Intelligience;
         public int Dexterity;
-        private int health;
+        protected int health;
 
         public int Health
         {
             get { return health; }
+            set { health = value; }
         }
 
         public Human(string n)
@@ -38,7 +39,6 @@ namespace Human
         public virtual int Attack(Human target)
         {
             target.health -= 5 * this.Strength;
-            Console.WriteLine($"{Name} attacked {target.Name} for {dmg} damage!");
             return target.Health;
         }
     }

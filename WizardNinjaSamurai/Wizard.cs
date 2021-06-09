@@ -2,19 +2,18 @@ using System;
 
 namespace WizardNinjaSamurai
 {
-    class Wizard : Human
+    public class Wizard : Human
     {
-        public Wizard(string n, int s, int d) : base(n, s, d)
+        public Wizard(string name) : base("wizard", 3, 25, 3, 50)
         {
-            health = 50;
-            Intelligience = 25;
+            Name = name;
         }
 
         public override int Attack(Human target)
         {
             int dmg = 5 * this.Intelligience;
-            target.health -= dmg;
-            this.health += dmg;
+            target.Health -= dmg;
+            this.Health += dmg;
             Console.WriteLine($"{Name} attacked {target.Name} for {dmg} damage!");
             return target.Health;
         }
@@ -22,7 +21,7 @@ namespace WizardNinjaSamurai
         public int Heal(Human target)
         {
             int heal = 10 * Intelligience;
-            target.health += heal;
+            target.Health += heal;
             Console.WriteLine($"{Name} healed {target.Name} for {heal} points!");
             return target.Health;
         }

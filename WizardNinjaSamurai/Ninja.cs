@@ -2,34 +2,38 @@ using System;
 
 namespace WizardNinjaSamurai
 {
-    class Ninja : Human
+    public class Ninja : Human
     {
-        public Ninja(string n, int s, int i, int h) : base(n, s, i, h)
+
+        Random rand = new Random();
+        public Ninja(string name) : base("ninja", 3, 3, 175, 100)
         {
-            Dexterity = 175;
+            Name = name;
         }
         public override int Attack(Human target)
         {
-            Random rand = new Random(0,5);
-            if (rand == 0)
+            int chance = rand.Next(0,5);
+            if (chance == 0)
             {
                 int dmg = Dexterity * 5 + 10;
-                target.health -= dmg;
+                target.Health -= dmg;
+                Console.WriteLine($"{Name} attacked you for {dmg} damage!");
             }
             else
             {
                 int dmg = Dexterity * 5;
-                target.health -= dmg;
+                target.Health -= dmg;
+                Console.WriteLine($"{Name} attacked you for {dmg} damage!");
             }
-            Console.WriteLine($"{Name} attacked {target.Name} for {dmg} damage!");
             return target.Health;
         }
 
         public int Steal(Human target)
         {
             int stolenHealth = 5;
-            target.health -= stolenHealth;
-            this.health += stolenHealth;
+            target.Health -= stolenHealth;
+            this.Health += stolenHealth;
+            Console.WriteLine($"{Name} stole {stolenHealth} of your health");
             return target.Health;
         }
     }
