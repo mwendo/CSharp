@@ -1,6 +1,6 @@
 namespace WizardNinjaSamurai
 {
-    public class Samurai : Human
+    class Samurai : Human
     {
         public Samurai(string n, int s, int i, int d) : base(n, s, i ,d)
         {

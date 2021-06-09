@@ -2,7 +2,7 @@ using System;
 
 namespace WizardNinjaSamurai
 {
-    public class Ninja : Human
+    class Ninja : Human
     {
         public Ninja(string n, int s, int i, int h) : base(n, s, i, h)
         {
